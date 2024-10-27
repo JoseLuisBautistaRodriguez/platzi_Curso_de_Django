@@ -18,7 +18,7 @@ class Publisher(models.Model):
     
 class Book(models.Model):
     title = models.TextField(max_length=200)
-    publication_date = models.DateField()
+    publication_date = models.DateField() # Fecha de publicación
     publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
 
     def __str__(self):
