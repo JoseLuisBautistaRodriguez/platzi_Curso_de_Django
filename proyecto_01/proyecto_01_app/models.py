@@ -19,7 +19,7 @@ class Publisher(models.Model):
 class Book(models.Model):
     title = models.TextField(max_length=200)
     publication_date = models.DateField() # Fecha de publicación
-    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE) # Here we are defining a one-to-many relationship: a book has only one publisher, but a publisher can have many books.
 
     def __str__(self):
         return 
